@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Secrets Environment
-secrets-environment/environment.secret.ts
+/secrets-environment/environment.secret.ts
