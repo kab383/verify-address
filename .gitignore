@@ -40,6 +40,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Secrets Environment
-verify-address/src/app/secrets-environment/environment.secret.ts
+/src/app/secret-environments
