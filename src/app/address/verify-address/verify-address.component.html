@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3 class="text-center mb-4">Enter Address:</h3>
+            <div class="form-group">
+                <label>Suite:</label>
+                <input class="form-control" [(ngModel)]="address1">
+            </div>
+            <div class="form-group">
+                <label>Street:</label>
+                <input class="form-control" [(ngModel)]="address2">
+            </div>
+            <div class="form-group">
+                <label>City:</label>
+                <input class="form-control" [(ngModel)]="city">
+            </div>
+            <div class="form-group">
+                <label>State:</label>
+                <input class="form-control" [(ngModel)]="state">
+            </div>
+            <div class="form-group">
+                <label>ZIP Code:</label>
+                <input class="form-control" [(ngModel)]="zip5">
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" (click)="verifyAddress()" type="submit">Verify Address</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="verifiedAddress">
+                <h3 class="text-center mb-4">Verified Address:</h3>
+                <div class="text-left">
+                    <p>Suite: {{ verifiedAddress.Address1 }}</p>
+                    <p>Street: {{ verifiedAddress.Address2 }}</p>
+                    <p>City: {{ verifiedAddress.City }}</p>
+                    <p>State: {{ verifiedAddress.State }}</p>
+                    <p>ZIP Code: {{ verifiedAddress.Zip5 }}</p>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-danger" (click)="clearAddress()">Clear Address</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
