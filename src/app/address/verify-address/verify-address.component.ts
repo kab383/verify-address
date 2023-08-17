@@ -26,14 +26,14 @@ export class VerifyAddressComponent {
       const xmlDoc = parser.parseFromString(response, 'text/xml');
 
       // Access the desired data using querySelector for each property
-      const addressNode = xmlDoc.querySelector('AddressValidateResponse');
-      if (addressNode) {
+      const addressObj = xmlDoc.querySelector('AddressValidateResponse');
+      if (addressObj) {
         this.verifiedAddress = {
-          Address1: addressNode.querySelector('Address1')?.textContent || '',
-          Address2: addressNode.querySelector('Address2')?.textContent || '',
-          City: addressNode.querySelector('City')?.textContent || '',
-          State: addressNode.querySelector('State')?.textContent || '',
-          Zip5: addressNode.querySelector('Zip5')?.textContent || ''
+          Address1: addressObj.querySelector('Address1')?.textContent || '',
+          Address2: addressObj.querySelector('Address2')?.textContent || '',
+          City: addressObj.querySelector('City')?.textContent || '',
+          State: addressObj.querySelector('State')?.textContent || '',
+          Zip5: addressObj.querySelector('Zip5')?.textContent || ''
         };
       }
     });
